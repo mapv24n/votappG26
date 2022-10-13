@@ -1,0 +1,49 @@
+#cuerpo {
+    width: 90%;
+    margin: 5px auto;
+    padding: 10px auto;
+}
+
+#nomCan{
+    text-align: center;
+}
+
+#titulo {
+    color: rgb(192, 71, 71);
+    text-align: center;
+    margin: 10px auto;
+    padding: 20px auto;
+    height: 80px;
+}
+
+#contenido {
+    color: rgb(23, 58, 58);
+    text-align: justify;
+    width: 60%;
+    float: left;
+    margin: 10px auto;
+    padding: 20px auto;
+}
+
+#conEst{
+    text-align: right;
+    color: brown;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#info {
+    width: 40%;
+    float: left;
+    margin: 50px auto;
+    padding: 20px auto;
+}
+
+.estiloImg {
+    width: 300px;
+    display: block;
+    margin: auto;
+}
+
+button{
+    width: 200px;
+}

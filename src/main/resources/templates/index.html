@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <title>votApp v.1.0</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/estilo.css}">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@latest/dist/Chart.min.js"></script>
+</head>
+
+<body id="cuerpo">
+    <div id="titulo">
+        <!-- 1. Colocan el titulo de la Página (El contenido y formato a su gusto) -->
+        <h1>TITULO DE LA PAGINA (CONTENIDO Y FORMATO A SU GUSTO)</h1>
+    </div>
+
+    <div id="contenido">
+        <!-- 2. Colocar la descripción de la página (El contenido y formato a su gusto) Mínimo 1 Parráfo de 5 líneas -->
+        <p>
+            Texto de descripción Texto de descripción Texto de descripción Texto de descripción Texto de descripción
+            de descripción Texto de descripción Texto de descripción Texto de descripción Texto de descripción Texto de
+            descripción Texto de descripción Texto de descripción Texto de descripción Texto de descripción Texto de
+            descripción Texto de descripción Texto de descripción Texto de descripción Texto de descripción Texto de
+            descripción Texto de descripción
+            Texto de descripción Texto de descripción Texto de descripción Texto de descripción Texto de descripción
+            Texto
+            de descripción Texto de descripción Texto de descripción Texto de descripción Texto de descripción Texto de
+            descripción Texto de descripción Texto de descripción Texto de descripción Texto de descripción Texto de
+            descripción Texto de descripción Texto de descripción Texto de descripción Texto de descripción Texto de
+            descripción Texto de descripción
+            Texto de descripción Texto de descripción Texto de descripción Texto de descripción Texto de descripción
+            Texto
+        </p>
+
+        <!-- 3. Colocan la tabla con la información de los candidatos (mínimo 4, el contenido y formato a su gusto) -->
+
+        <table class="table">
+            <thead>
+                <th id="nomCan">Candidato 1</th>
+                <th id="nomCan">Candidato 2</th>
+            </thead>
+            <tr>
+                <td width="50%">
+                    <img src="img/foto.webp" class="estiloImg"><br>
+                    <p align="justify">
+                        descripción candidato descripción candidato descripción candidato
+                        descripción candidato descripción candidato descripción candidato
+                        descripción candidato descripción candidato descripción candidato<br>
+                        <div class="d-grid gap-2 col-6 mx-auto">
+                            <button class="btn btn-primary" type="button" onclick="javascript:votar(0);">Votar</button>
+                            <a th:href="@{/partido}"><button class="btn btn-primary" type="button">Partido Político</button></a>
+                        </div>
+                    </p>
+                </td>
+                <td width="50%">
+                    <img src="img/foto.webp" class="estiloImg"><br>
+                    <p align="justify">
+                        descripción candidato descripción candidato descripción candidato
+                        descripción candidato descripción candidato descripción candidato
+                        descripción candidato descripción candidato descripción candidato <br>
+                        <div class="d-grid gap-2 col-6 mx-auto">
+                            <button class="btn btn-primary" type="button" onclick="javascript:votar(1);">Votar</button>
+                            <a th:href="@{/partido}"><button class="btn btn-primary" type="button">Partido Político</button></a>                            
+                        </div>
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="info">
+        <img src="img/estadistica.png" class="estiloImg"><br>
+        <table align="center">
+            <tr>
+                <td>
+                    <button type="button" class="btn btn-outline-primary" onclick="javascript:estadistica();">Ver Resultados Consolidados</button><br>
+                    <button type="button" class="btn btn-outline-danger">Ver Resultados por Región</button><br>
+                    <button type="button" class="btn btn-outline-warning">Ver Resultados por Ciudad</button>
+                </td>
+            </tr>
+        </table><br><br>
+        <div id="conEst"></div>
+        <canvas id="grafica"></canvas>
+        <script th:src="@{/js/votapp.js}"></script>
+    </div>
+</body>
+
+</html>
